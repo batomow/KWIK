@@ -1,0 +1,8 @@
+E:\KWIK\KWIK\KWIK\bin\Debug\KWIK.exe.config
+D:\KWIK\KWIK\KWIK\bin\Debug\KWIK.exe.config
+D:\KWIK\KWIK\KWIK\bin\Debug\KWIK.exe
+D:\KWIK\KWIK\KWIK\bin\Debug\KWIK.pdb
+D:\KWIK\KWIK\KWIK\obj\Debug\KWIK.csprojResolveAssemblyReference.cache
+D:\KWIK\KWIK\KWIK\obj\Debug\KWIK.csproj.CoreCompileInputs.cache
+D:\KWIK\KWIK\KWIK\obj\Debug\KWIK.exe
+D:\KWIK\KWIK\KWIK\obj\Debug\KWIK.pdb
