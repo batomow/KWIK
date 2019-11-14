@@ -12,7 +12,9 @@ namespace KWIK
             while(true)
             {
                 string input = Console.ReadLine();
-
+                List <string> stopwords = new List<String>{"a", "es", "his", "of", "the", "C", "A", "H", "M", "R", "is", "fue", "la", "up", "es", "la", "up", "which", "when"};
+               
+                
                 // Si se encuentra con una oración vacía, se rompe el ciclo y ya no se aceptan mas oraciones.
                 if(input == "\"\"" || input == "." || input == " " || input == "")
                 {
@@ -45,6 +47,10 @@ namespace KWIK
                             input = input.Substring(0, i) + (char)(oldChar + 32) + input.Substring(i + 1);
                         }
                     }
+
+                    foreach(string word in stopwords)
+                        while(input.Contains(word)
+                                input.Remove(word); 
 
                     data.Add(input);
                 }
