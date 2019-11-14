@@ -12,7 +12,6 @@ namespace KWIK
             while(true)
             {
                 string input = Console.ReadLine();
-                List <string> stopwords = new List<String>{"a", "es", "his", "of", "the", "C", "A", "H", "M", "R", "is", "fue", "la", "up", "es", "la", "up", "which", "when"};
                
                 
                 // Si se encuentra con una oración vacía, se rompe el ciclo y ya no se aceptan mas oraciones.
@@ -48,18 +47,41 @@ namespace KWIK
                         }
                     }
 
-                    foreach(string word in stopwords)
-                        while(input.Contains(word)
-                                input.Remove(word); 
-
                     data.Add(input);
                 }
             }
+        }
+        public void RemoveInput(){
+            Console.WriteLine("Quieres eliminar stop words?"); 
+            string yesno = Input.ReadLine(); 
+            if(yesno == "y" || yesno == "yes"){
+                List <string> stopwords = new List<String>{"a", "es", "his", "of", "the", "C", "A", "H", "M", "R", "is", "fue", "la", "up", "es", "la", "up", "which", "when"};
+                foreach(string word in stopwords)
+                while(input.Contains(word)
+                        input.Remove(word); 
+            }
+            Console.WriteLine("Cuales lineas quiere remover?");  
+            int counte = 1; 
+            foreach(string line in data){
+                Console.WriteLine(counter + "\t" + line); 
+                counter++; 
+            }
+            List<int> indexes = new List<int>(); 
+            int output; 
+            while(Int.TryParse(ReadLine(), out output)){
+                indexes.add(output); 
+            }
+            foreach(int index in indexes)
+                data[index] = ""; 
+            while(data.Contains(""))
+                data.Remove(""); 
+    
         }
 
         public List<string> GetData()
         {
             ReadInput();
+            RemoveInput(); 
 
             return data;
         }

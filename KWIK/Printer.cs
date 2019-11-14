@@ -9,6 +9,21 @@ namespace KWIK
 
         private void Print()
         {
+            Console.WriteLine("Cuales lineas quiere remover?");  
+            int counte = 1; 
+            foreach(string line in data){
+                Console.WriteLine(counter + "\t" + line); 
+                counter++; 
+            }
+            List<int> indexes = new List<int>(); 
+            int output; 
+            while(Int.TryParse(ReadLine(), out output)){
+                indexes.add(output); 
+            }
+            foreach(int index in indexes)
+                data[index] = ""; 
+            while(data.Contains(""))
+                data.Remove(""); 
             foreach(string s in data)
             {
                 Console.WriteLine(s);

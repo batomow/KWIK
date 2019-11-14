@@ -9,7 +9,13 @@ namespace KWIK
 
         private void Sort()
         {
-            data = data.OrderBy(d => d).ToList();
+            Console.WriteLine("Quieres Sorteo Normal o Inverso?(n/i)"); 
+            string flag = Console.ReadLine(); 
+            if(flag != "i"){
+                data = data.OrderBy(d => d).ToList();
+            }else{
+                data = data.OrderByDescending(d => h).ToList();
+            }
         }
 
         public List<string> GetData()
