@@ -53,12 +53,12 @@ namespace KWIK
         }
         public void RemoveInput(){
             Console.WriteLine("Quieres eliminar stop words?"); 
-            string yesno = Input.ReadLine(); 
+            string yesno = Console.ReadLine(); 
             if(yesno == "y" || yesno == "yes"){
                 List <string> stopwords = new List<String>{"a", "es", "his", "of", "the", "C", "A", "H", "M", "R", "is", "fue", "la", "up", "es", "la", "up", "which", "when"};
                 foreach(string word in stopwords)
-                while(input.Contains(word)
-                        input.Remove(word); 
+                    while(data.Contains(word)
+                        data.Remove(word); 
             }
             Console.WriteLine("Cuales lineas quiere remover?");  
             int counte = 1; 
@@ -72,7 +72,7 @@ namespace KWIK
                 indexes.add(output); 
             }
             foreach(int index in indexes)
-                data[index] = ""; 
+                data[index-1] = ""; 
             while(data.Contains(""))
                 data.Remove(""); 
     

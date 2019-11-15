@@ -10,7 +10,7 @@ namespace KWIK
         private void Print()
         {
             Console.WriteLine("Cuales lineas quiere remover?");  
-            int counte = 1; 
+            int counter = 1; 
             foreach(string line in data){
                 Console.WriteLine(counter + "\t" + line); 
                 counter++; 
@@ -21,7 +21,7 @@ namespace KWIK
                 indexes.add(output); 
             }
             foreach(int index in indexes)
-                data[index] = ""; 
+                data[index-1] = ""; 
             while(data.Contains(""))
                 data.Remove(""); 
             foreach(string s in data)
